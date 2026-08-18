@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+:root {
+
+    --bg-principal: #F3EAF4;
+
+    --cabecalho: #4D1F62;
+    --roxo-texto: #32154A;
+
+    --cards: #CFAEDC;
+
+    --botao: #C8A35A;
+    --botao-hover: #B38E47;
+
+    --branco: #FFFFFF;
+    --textinho: #4A4A4A;
+
+    --borda: #E8D7EC;
+
+    --sombra: rgba(77, 31, 98, .12);
+
+    --transition: .3s ease;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--bg-principal);
+
+    color: var(--textinho);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    height: 100vh;
+
+    background: var(--cabecalho);
+
+    box-shadow: 4px 0 20px var(--sombra);
+
+    z-index: 1000;
+
+}
+
+
+nav {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 35px 20px;
+
+}
+
+
+.logo {
+
+    width: 90px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+}
+
+
+.Texto-P {
+
+    color: var(--branco);
+
+    font-size: .72rem;
+
+    text-align: center;
+
+    line-height: 1.4;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.menu a {
+
+    color: var(--branco);
+
+    padding: 13px 16px;
+
+    border-radius: 10px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+
+.menu a:hover {
+
+    background: rgba(255, 255, 255, .12);
+
+    color: var(--botao);
+
+    transform: translateX(5px);
+
+}
+
+
+.btn-sair {
+
+    width: 100%;
+    margin-top: auto;
+    background: var(--botao);
+    color: var(--branco);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    transition: var(--transition);
+
+}
+
+.btn-sair:hover {
+
+    background: var(--botao-hover);
+    border-color: rgba(255, 255, 255, .25);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(200, 163, 90, .35);
+
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+
+    margin-left: 260px;
+
+    min-height: 100vh;
+
+}
+
+
+.box {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 30px;
+
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =========================
+   CARDS DE CONTATO
+========================= */
+
+.sect {
+
+    min-height: 230px;
+
+    padding: 30px 25px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 20px var(--sombra);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    transition: var(--transition);
+
+}
+
+
+.sect:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 14px 28px var(--sombra);
+
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--roxo-texto);
+
+}
+
+
+.sect h3 {
+
+    font-size: 1.35rem;
+
+    margin-bottom: 12px;
+
+}
+
+
+.sect p {
+
+    color: var(--textinho);
+
+    font-size: .95rem;
+
+    margin-bottom: 6px;
+
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+
+    background: var(--botao);
+
+    color: var(--branco);
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 12px 30px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+
+button:hover {
+
+    background: var(--botao-hover);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    margin-left: 260px;
+
+    background: var(--cabecalho);
+
+    color: var(--branco);
+
+    text-align: center;
+
+    padding: 12px 20px;
+
+    border-top: 2px solid var(--botao);
+
+}
+
+
+footer p {
+
+    margin: 0;
+
+    color: var(--branco);
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+
+    nav {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .logo {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .Texto-P {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .menu {
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .menu a {
+
+        padding: 10px 12px;
+
+        font-size: .9rem;
+
+    }
+
+
+    main {
+
+        margin-left: 0;
+
+    }
+
+
+    .box {
+
+        padding: 35px 20px;
+
+    }
+
+
+    .container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+    }
+
+
+    .sect {
+
+        min-height: 200px;
+
+    }
+
+
+    footer {
+
+        margin-left: 0;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .menu {
+
+        gap: 5px;
+
+    }
+
+
+    .menu a {
+
+        font-size: .82rem;
+
+        padding: 8px 10px;
+
+    }
+
+
+    .box {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .sect {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .sect h3 {
+
+        font-size: 1.2rem;
+
+    }
+
+}
